@@ -19,5 +19,5 @@ client.on('guildMemberRemove', function (member) {
   let embed = new Discord.RichEmbed()
       .setDescription(':cry: **' + member.user.username + '** a quitté ' + member.guild.name)
       .setFooter('Nous sommes désormais ' + member.guild.memberCount)
-  member.guild.channels.get('ID DU CHANNEL').send(embed)
+  member.guild.channels.get('577974964393607198').send(embed)
 })
