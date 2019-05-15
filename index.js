@@ -6,7 +6,7 @@ client.on("ready", () => {
 });
 
 client.login(process.env.TOKEN);
-
+var prefix = ("!");
 client.on('guildMemberAdd', function (member) {
   let embed = new Discord.RichEmbed()
       .setDescription(':tada: **' + member.user.username + '** a rejoint ' + member.guild.name)
