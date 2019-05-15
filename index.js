@@ -21,3 +21,11 @@ client.on('guildMemberRemove', function (member) {
       .setFooter('Nous sommes désormais ' + member.guild.memberCount)
   member.guild.channels.get('577974964393607198').send(embed)
 })
+  if (MessageChannel.content.includes("!help")){
+var help_embed = new Discord.RichEmbed()
+.setTitle("HELP")
+.setColor("#02FB24")
+.setDescription(":robot: Voici les commandes du bot :")
+.addField("Citoyen(ne)", "!help")
+message.channel.send(help_embed)
+}
