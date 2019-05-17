@@ -8,7 +8,7 @@ client.login(process.env.TOKEN);
 //Quand le bot ce lance
 client.on("ready", () => {
   console.log("Je suis prêt !")
-  client.user.setActivity("Vous aidez")
+  client.user.setActivity("êtres coder")
 })
 //Quand un membre rejoin
 client.on('guildMemberAdd', function (member) {
