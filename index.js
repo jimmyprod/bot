@@ -27,12 +27,10 @@ client.on('guildMemberRemove', function (member) {
 
 })
 
-//Commandes test bot
+//Commandes !help bot
 bot.on("message", function(message) {
   if(message.content === '!help') {
-    let embed = new Discord.RichEmbed()
-    .setTitle('Voici la liste de toutes les commandes :')
-    .setDescritpion('!help')
-    .setFooter('Permet d afficher la liste des commandes')
+    message.channel.send("Voici la liste des commandes :")
+    message.channel.send("!help")
   }
 })
