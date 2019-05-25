@@ -1,21 +1,19 @@
 const Discord = require('discord.js');
 const client = new Discord.Client();
 
-let prefix = "!"
-
 client.login(process.env.TOKEN);
 
 //Quand le bot ce lance
 client.on("ready", () => {
   console.log("Je suis prêt !")
-  client.user.setActivity("êtres coder")
+  client.user.setActivity("Vous aidez")
 })
 //Quand un membre rejoin
 client.on('guildMemberAdd', function (member) {
   let embed = new Discord.RichEmbed()
       .setDescription(':tada: **' + member.user.username + '** a rejoint ' + member.guild.name)
       .setFooter('Nous sommes désormais ' + member.guild.memberCount)
-  member.guild.channels.get('577602282120806407').send(embed)
+  member.guild.channels.get('577604604590817280').send(embed)
   member.addRole('577972770776809482')
 
 })
@@ -30,9 +28,11 @@ client.on('guildMemberRemove', function (member) {
 })
 
 //Commandes test bot
-client.on("message", message =>{
-  if(message.content === prefix + "test") {
-   message.channel.send("Le bot fonctionne correctement.")
-   
+bot.on("message", message =>{
+  if(message.content === '!help') {
+    let embed = new Discord.RichEmbed()
+    .setTitle('Voici la liste de toutes les commandes :')
+    .setDescritpion('!help')
+    .setFooter('Permet d afficher la liste des commandes')
   }
 })
