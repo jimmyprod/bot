@@ -28,7 +28,7 @@ client.on('guildMemberRemove', function (member) {
 })
 
 //Commandes test bot
-bot.on("message", message =>{
+bot.on("message", function(embed) {
   if(message.content === '!help') {
     let embed = new Discord.RichEmbed()
     .setTitle('Voici la liste de toutes les commandes :')
