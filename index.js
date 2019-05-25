@@ -28,7 +28,7 @@ client.on('guildMemberRemove', function (member) {
 })
 
 //Commandes !help bot
-bot.on("message", function(message) {
+client.on("message", function(message) {
   if(message.content === '!help') {
     message.channel.send("Voici la liste des commandes :")
     message.channel.send("!help")
